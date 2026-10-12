@@ -8,6 +8,7 @@
         ],
         "variants": [
           {
+            "suffix": "Stock Shortwide",
             "file": "Nightfall",
             "samples": {
               "count": 5,
