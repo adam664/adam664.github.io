@@ -9,12 +9,21 @@
         "variants": [
           {
             "suffix": "Stock Shortwide",
-            "file": "Nightfall",
+            "file": "Nightfall Stock Shortwide",
             "samples": {
               "count": 5,
               "display": [
                 "avg",
-                "curves",
+                "fill"
+              ]
+            }
+          },
+          {
+            "file": "Nightfall Stock Black Core",
+            "samples": {
+              "count": 5,
+              "display": [
+                "avg",
                 "fill"
               ]
             }
