@@ -77,7 +77,7 @@ const CONFIG = {
       FONT_FAMILY: "sans-serif",
       FONT_WEIGHT: "600",
       OPACITY: "0.4",
-      POSITION: { UP: "0", DOWN: "5", LEFT: "50", RIGHT: "0" },
+      POSITION: { UP: "0", DOWN: "5", LEFT: "75", RIGHT: "0" },
     }
   ],
   // Target configuration
