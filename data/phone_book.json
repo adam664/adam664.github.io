@@ -4,13 +4,13 @@
     "phones": [
       {
         "name": [
-          ""
+          "Nightfall"
         ],
         "variants": [
           {
             "file": "Nightfall",
             "samples": {
-              "count": 3,
+              "count": 5,
               "display": [
                 "avg",
                 "curves",
