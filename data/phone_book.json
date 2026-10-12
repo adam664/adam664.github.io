@@ -1,5 +1,28 @@
 [
   {
+    "name": "Crinear",
+    "phones": [
+      {
+        "name": [
+          ""
+        ],
+        "variants": [
+          {
+            "file": "Nightfall",
+            "samples": {
+              "count": 3,
+              "display": [
+                "avg",
+                "curves",
+                "fill"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Flo",
     "suffix": "Audio",
     "phones": [
@@ -7,13 +30,12 @@
         "name": [
           "Bluelover"
         ],
-        "file": [
-          "Bluelover"
-        ],
-        "suffix": [
-          ""
-        ],
-        "samples": 5
+        "variants": [
+          {
+            "file": "Bluelover",
+            "samples": 5
+          }
+        ]
       },
       {
         "name": "Lily",
@@ -29,13 +51,12 @@
         "name": [
           "Blessing2"
         ],
-        "file": [
-          "Blessing2"
-        ],
-        "suffix": [
-          ""
-        ],
-        "samples": 5
+        "variants": [
+          {
+            "file": "Blessing2",
+            "samples": 5
+          }
+        ]
       }
     ]
   },
@@ -46,13 +67,12 @@
         "name": [
           "Hexa"
         ],
-        "file": [
-          "Hexa"
+        "variants": [
+          {
+            "file": "Hexa",
+            "samples": 5
+          }
         ],
-        "suffix": [
-          ""
-        ],
-        "samples": 5,
         "description": "Left side dead DD"
       }
     ]
@@ -64,13 +84,12 @@
         "name": [
           "One"
         ],
-        "file": [
-          "One"
-        ],
-        "suffix": [
-          ""
-        ],
-        "samples": 5
+        "variants": [
+          {
+            "file": "One",
+            "samples": 5
+          }
+        ]
       },
       {
         "name": "Bunny",
