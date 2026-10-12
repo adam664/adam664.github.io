@@ -95,7 +95,7 @@ const CONFIG = {
   SAMPLES: {
     DEFAULT_COUNT: 1,
     DEFAULT_DISPLAY: ["avg", "fill"],
-    FILL_OPACITY: 0.5,
+    FILL_OPACITY: 0.4,
   },
   // Graph Trace Styling
   TRACE_STYLING: {
