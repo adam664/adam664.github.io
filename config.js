@@ -73,7 +73,7 @@ const CONFIG = {
       TYPE: "IMAGE",
       CONTENT: ["./assets/images/naoegokoro.png"],
       LOCATION: "TOP_RIGHT",
-      SIZE: "60px",
+      SIZE: "80px",
       FONT_FAMILY: "sans-serif",
       FONT_WEIGHT: "600",
       OPACITY: "0.4",
