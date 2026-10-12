@@ -73,11 +73,11 @@ const CONFIG = {
       TYPE: "IMAGE",
       CONTENT: ["./assets/images/naoegokoro.png"],
       LOCATION: "TOP_RIGHT",
-      SIZE: "80px",
+      SIZE: "75px",
       FONT_FAMILY: "sans-serif",
       FONT_WEIGHT: "600",
       OPACITY: "0.4",
-      POSITION: { UP: "0", DOWN: "5", LEFT: "135", RIGHT: "0" },
+      POSITION: { UP: "0", DOWN: "5", LEFT: "50", RIGHT: "0" },
     }
   ],
   // Target configuration
@@ -95,7 +95,7 @@ const CONFIG = {
   SAMPLES: {
     DEFAULT_COUNT: 1,
     DEFAULT_DISPLAY: ["avg", "fill"],
-    FILL_OPACITY: 0.4,
+    FILL_OPACITY: 0.35,
   },
   // Graph Trace Styling
   TRACE_STYLING: {
