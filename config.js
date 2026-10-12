@@ -31,11 +31,10 @@ const CONFIG = {
   INTERFACE: {
     PREFERRED_DARK_MODE_THEME: "light",
     ALLOW_REMOVING_PHONE_FROM_SELECTOR: true,
-	PANEL_POSITION: "right",
     SWITCH_PHONE_PANEL_ON_BRAND_CLICK: true,
     TARGET: {
       ALLOW_MULTIPLE_LINE_PER_TYPE: true,
-      OMIT_TARGET_SUFFIX: false,
+      OMIT_TARGET_SUFFIX: true,
       COLLAPSE_TARGET_LIST_ON_INITIAL: false,
     },
     HIDE_DEV_DONATE_BUTTON: true,
@@ -60,20 +59,25 @@ const CONFIG = {
   // Watermark Settings
   WATERMARK: [
     {
-    TYPE: "TEXT",
-    CONTENT: "adam664.github.io", LOCATION: "BOTTOM_RIGHT",
-    SIZE: "18px", FONT_FAMILY: "sans-serif", FONT_WEIGHT: "600", COLOR: "#000000", OPACITY: "0.3",
-	POSITION: {UP: "6", DOWN: "0", LEFT: "2", RIGHT: "0"},
-  },
+      TYPE: "TEXT",
+      CONTENT: "adam664.github.io",
+      LOCATION: "BOTTOM_RIGHT",
+      SIZE: "18px",
+      FONT_FAMILY: "sans-serif",
+      FONT_WEIGHT: "600",
+      COLOR: "#000000",
+      OPACITY: "0.3",
+      POSITION: { UP: "6", DOWN: "0", LEFT: "2", RIGHT: "0" },
+    },
     {
       TYPE: "IMAGE",
       CONTENT: ["./assets/images/naoegokoro.png"],
       LOCATION: "TOP_RIGHT",
-	  POSITION: {UP: "0", DOWN: "5", LEFT: "135", RIGHT: "0"},
-      SIZE: "130px",
-	  OPACITY: "0.4",
+      SIZE: "60px",
       FONT_FAMILY: "sans-serif",
       FONT_WEIGHT: "600",
+      OPACITY: "0.4",
+      POSITION: { UP: "0", DOWN: "5", LEFT: "135", RIGHT: "0" },
     }
   ],
   // Target configuration
@@ -87,10 +91,12 @@ const CONFIG = {
       files: ["ISO 11904-2 DF Target", "∆ Headphones.com IEM DF Target"],
     }
   ],
-  // Multi-Sample Measurement Settings
-  MULTI_SAMPLE: { DEFAULT_DISPLAY: "average" },
-  // HpTF (Headphone Transfer Function) Sample Deviation Settings
-  HPTF: { DEFAULT_DISPLAY: "fill+curves", FILL_OPACITY: 0.3 },
+  // Sample Set Settings
+  SAMPLES: {
+    DEFAULT_COUNT: 1,
+    DEFAULT_DISPLAY: ["avg", "fill"],
+    FILL_OPACITY: 0.5,
+  },
   // Graph Trace Styling
   TRACE_STYLING: {
     PHONE_TRACE_THICKNESS: 2,
@@ -140,7 +146,7 @@ const CONFIG = {
         q: 0.42,
       },
       { id: "ear", name: "Ear", type: "PK", freq: 2750, q: 1 },
-	  { id: "pssr", name: "PSSR", type: "HSQ", freq: 500, q: 0.4 },
+      { id: "pssr", name: "PSSR", type: "HSQ", freq: 500, q: 0.4 }
     ],
     FILTER_PRESET: [],
     INITIAL_TARGET_FILTERS: [
@@ -154,11 +160,21 @@ const CONFIG = {
       }
     ],
   },
+  // Cross-Site Search Settings
+  CROSS_SITE_SEARCH: {
+    ENABLED: true,
+    INDEX_URLS: [],
+  },
+  // Site Selector Settings
+  SITE_SELECTOR: {
+    ENABLED: "auto",
+    INDEX_URLS: [],
+  },
+  // Per-Curve Download Button
+  DOWNLOAD: { ENABLED: true },
   // Misc Panel Description
   DESCRIPTION: [
-    {
-      TYPE: "HTML",
-    }
+    { TYPE: "HTML" }
   ],
 };
 
