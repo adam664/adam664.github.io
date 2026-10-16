@@ -8,7 +8,7 @@ const CONFIG = {
   INITIAL_TARGETS: ["∆ Headphones.com IEM DF Target"],
   INITIAL_PANEL: "graph",
   // Default Normalization Type and Value.
-  NORMALIZATION: { TYPE: "Hz", HZ_VALUE: 630 },
+  NORMALIZATION: { TYPE: "Avg", HZ_VALUE: 630 },
   // Default Visualization Settings.
   VISUALIZATION: {
     ASPECT_RATIO: "CrinGraph",
@@ -25,13 +25,14 @@ const CONFIG = {
       TEXT_SIZE: "12px",
       TEXT_WEIGHT: "500",
     },
-    RIG_DESCRIPTION: "‎ ",
+    RIG_DESCRIPTION: " ",
   },
   // User Interface Settings
   INTERFACE: {
     PREFERRED_DARK_MODE_THEME: "light",
     ALLOW_REMOVING_PHONE_FROM_SELECTOR: true,
     SWITCH_PHONE_PANEL_ON_BRAND_CLICK: true,
+    SHOW_FREQUENCY_TUTORIAL_ON_INITIAL_LOAD: false,
     TARGET: {
       ALLOW_MULTIPLE_LINE_PER_TYPE: true,
       OMIT_TARGET_SUFFIX: true,
@@ -44,8 +45,11 @@ const CONFIG = {
   // Language Settings
   LANGUAGE: {
     LANGUAGE_LIST: [
+      ["cs", "Čeština"],
       ["en", "English"],
-      ["cs", "Čeština"]
+      ["ko", "한국어"],
+      ["ru", "Русский"],
+      ["uk", "Українська"]
     ],
     ENABLE_I18N: true,
     ENABLE_SYSTEM_LANG_DETECTION: true,
@@ -65,9 +69,8 @@ const CONFIG = {
       SIZE: "18px",
       FONT_FAMILY: "sans-serif",
       FONT_WEIGHT: "600",
-      COLOR: "#000000",
       OPACITY: "0.3",
-      POSITION: { UP: "6", DOWN: "0", LEFT: "2", RIGHT: "0" },
+      POSITION: { UP: "43", DOWN: "0", LEFT: "32", RIGHT: "0" },
     },
     {
       TYPE: "IMAGE",
@@ -76,7 +79,6 @@ const CONFIG = {
       SIZE: "75px",
       FONT_FAMILY: "sans-serif",
       FONT_WEIGHT: "600",
-      OPACITY: "0.4",
       POSITION: { UP: "0", DOWN: "5", LEFT: "77", RIGHT: "0" },
     }
   ],
@@ -95,7 +97,7 @@ const CONFIG = {
   SAMPLES: {
     DEFAULT_COUNT: 1,
     DEFAULT_DISPLAY: ["avg", "fill"],
-    FILL_OPACITY: 0.35,
+    FILL_OPACITY: 0.3,
   },
   // Graph Trace Styling
   TRACE_STYLING: {
@@ -117,18 +119,30 @@ const CONFIG = {
   // Topbar Link List
   TOPBAR: {
     TITLE: { TYPE: "HTML", CONTENT: "<h2>adam's modernGraphTool</h2>" },
-    LINK_LIST: [],
+    LINK_LIST: [
+      {
+        TITLE: "Docs",
+        URL: "https://potatosalad775.github.io/modernGraphTool/docs",
+      }
+    ],
   },
   // Preference Bound Settings
   PREFERENCE_BOUND: {
     ENABLE_BOUND_ON_INITIAL_LOAD: true,
-    BASE_DF_TARGET_FILE: "∆ Headphones.com IEM DF Target",
-    COLOR_FILL: "rgba(180,180,180,0.07)",
+    BOUND_LIST: [
+      { target: "∆ Headphones.com IEM DF Target" },
+      {
+        target: "ISO 11904-2 DF",
+        upper: "Bounds U.txt",
+        lower: "Bounds D.txt",
+      }
+    ],
+    COLOR_FILL: "rgba(180,180,180,0.1)",
     COLOR_BORDER: "rgba(120,120,120,0.5)",
   },
   // Target Customizer Settings
   TARGET_CUSTOMIZER: {
-    CUSTOMIZABLE_TARGETS: ["ISO 11904-2 DF Target", "∆ Headphones.com IEM DF Target"],
+    CUSTOMIZABLE_TARGETS: ["∆ Headphones.com IEM DF Target", "ISO 11904-2 DF Target"],
     FILTERS: [
       { id: "tilt", name: "Tilt", type: "TILT", freq: 0, q: 0 },
       {
@@ -146,17 +160,56 @@ const CONFIG = {
         q: 0.42,
       },
       { id: "ear", name: "Ear", type: "PK", freq: 2750, q: 1 },
-      { id: "pssr", name: "PSSR", type: "HSQ", freq: 500, q: 0.4 }
-    ],
-    FILTER_PRESET: [],
-    INITIAL_TARGET_FILTERS: [
       {
-        name: "ISO 11904-2 DF",
-        filter: { tilt: -1 },
+        id: "half-tilt",
+        name: "Half-Tilt",
+        type: "HSQ",
+        freq: 630,
+        q: 0.4,
+      }
+    ],
+    FILTER_PRESET: [
+      {
+        name: "Harman 2013",
+        filter: { bass: 6.6, treble: -1.4 },
       },
       {
+        name: "Harman 2015",
+        filter: { bass: 6.6, treble: -3, ear: -1.8 },
+      },
+      {
+        name: "Harman 2018",
+        filter: { bass: 4.8, treble: -4.4 },
+      },
+      {
+        name: "Harman IE MoA 2025 Average",
+        filter: { h25bass: 5.5, h25treble: -1.8, h25ear: 0.1 },
+      },
+      {
+        name: "Harman IE MoA 2025 C1",
+        filter: { h25bass: 4.2, h25treble: -3.4, h25ear: 0.2 },
+      },
+      {
+        name: "Harman IE MoA 2025 C2",
+        filter: { h25bass: 2, h25treble: 0.1, h25ear: -0.1 },
+      },
+      {
+        name: "Harman IE MoA 2025 C3",
+        filter: { h25bass: 8.6, h25treble: 2, h25ear: -0.2 },
+      },
+      {
+        name: "Harman IE MoA 2025 C4",
+        filter: { h25bass: 9, h25treble: -4.8, h25ear: 1 },
+      }
+    ],
+    INITIAL_TARGET_FILTERS: [
+      {
         name: "∆ Headphones.com IEM DF Target",
-        filter: { tilt: -1 },
+        filter: { tilt: -1, bass: 0 },
+      },
+      {
+        name: "ISO 11904-2 DF Target",
+        filter: { tilt: -1, bass: 0 },
       }
     ],
   },
@@ -172,10 +225,12 @@ const CONFIG = {
   },
   // Per-Curve Download Button
   DOWNLOAD: { ENABLED: true },
+  // Link with uniPEQ
+  UNIPEQ_LINK: { ENABLE: true },
+  // CDN Deployment Settings
+  CDN_MODE: { MAJOR_VERSION: 2 },
   // Misc Panel Description
-  DESCRIPTION: [
-    { TYPE: "HTML" }
-  ],
+  DESCRIPTION: [],
 };
 
 window.GRAPHTOOL_CONFIG = CONFIG;
