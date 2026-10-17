@@ -56,6 +56,62 @@
     ]
   },
   {
+    "name": "Kinera",
+    "phones": [
+      {
+        "name": [
+          "Celest Wyvern"
+        ],
+        "variants": [
+          {
+            "file": "Kinera Celest Wyvern",
+            "samples": {
+              "count": 5,
+              "display": [
+                "avg",
+                "fill"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "KZ",
+    "phones": [
+      {
+        "name": [
+          "Castor Pro"
+        ],
+        "variants": [
+          {
+            "suffix": "All On",
+            "file": "KZ Castor Pro All On",
+            "samples": {
+              "count": 3,
+              "display": [
+                "avg",
+                "fill"
+              ]
+            }
+          },
+          {
+            "suffix": "All Off",
+            "file": "KZ Castor Pro All off",
+            "samples": {
+              "count": 3,
+              "display": [
+                "avg",
+                "fill"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Moondrop",
     "phones": [
       {
@@ -68,23 +124,6 @@
             "samples": 5
           }
         ]
-      }
-    ]
-  },
-  {
-    "name": "Truthear",
-    "phones": [
-      {
-        "name": [
-          "Hexa"
-        ],
-        "variants": [
-          {
-            "file": "Hexa",
-            "samples": 5
-          }
-        ],
-        "description": "Left side dead DD"
       }
     ]
   },
@@ -110,24 +149,19 @@
     ]
   },
   {
-    "name": "Kinera Celest",
+    "name": "Truthear",
     "phones": [
       {
         "name": [
-          "Celest Wyvern"
+          "Hexa"
         ],
         "variants": [
           {
-            "file": "Kinera Celest Wyvern",
-            "samples": {
-              "count": 5,
-              "display": [
-                "avg",
-                "fill"
-              ]
-            }
+            "file": "Hexa",
+            "samples": 5
           }
-        ]
+        ],
+        "description": "Left side dead DD"
       }
     ]
   }
