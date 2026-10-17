@@ -180,36 +180,16 @@ const CONFIG = {
       {
         name: "Harman 2018",
         filter: { bass: 4.8, treble: -4.4 },
-      },
-      {
-        name: "Harman IE MoA 2025 Average",
-        filter: { h25bass: 5.5, h25treble: -1.8, h25ear: 0.1 },
-      },
-      {
-        name: "Harman IE MoA 2025 C1",
-        filter: { h25bass: 4.2, h25treble: -3.4, h25ear: 0.2 },
-      },
-      {
-        name: "Harman IE MoA 2025 C2",
-        filter: { h25bass: 2, h25treble: 0.1, h25ear: -0.1 },
-      },
-      {
-        name: "Harman IE MoA 2025 C3",
-        filter: { h25bass: 8.6, h25treble: 2, h25ear: -0.2 },
-      },
-      {
-        name: "Harman IE MoA 2025 C4",
-        filter: { h25bass: 9, h25treble: -4.8, h25ear: 1 },
       }
     ],
     INITIAL_TARGET_FILTERS: [
       {
         name: "∆ Headphones.com IEM DF Target",
-        filter: { tilt: -1, bass: 0 },
+        filter: { tilt: -1 },
       },
       {
         name: "ISO 11904-2 DF Target",
-        filter: { tilt: -1, bass: 0 },
+        filter: { tilt: -1 },
       }
     ],
   },
