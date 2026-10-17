@@ -79,7 +79,7 @@ const CONFIG = {
       SIZE: "75px",
       FONT_FAMILY: "sans-serif",
       FONT_WEIGHT: "600",
-      POSITION: { UP: "0", DOWN: "1@%", LEFT: "400", RIGHT: "0" },
+      POSITION: { UP: "0", DOWN: "125", LEFT: "400", RIGHT: "0" },
     }
   ],
   // Target configuration
