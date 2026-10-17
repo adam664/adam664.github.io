@@ -159,7 +159,7 @@ const CONFIG = {
         freq: 2500,
         q: 0.42,
       },
-      { id: "ear", name: "Ear", type: "PK", freq: 2750, q: 1 },
+      { id: "ear", name: "Ear", type: "PK", freq: 3000, q: 1 },
       {
         id: "half-tilt",
         name: "Half-Tilt",
