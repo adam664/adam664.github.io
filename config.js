@@ -69,7 +69,7 @@ const CONFIG = {
       SIZE: "14px",
       FONT_FAMILY: "sans-serif",
       FONT_WEIGHT: "600",
-      OPACITY: "0.3",
+      OPACITY: "0.2",
       POSITION: { UP: "5", DOWN: "0", LEFT: "5", RIGHT: "0" },
     },
     {
