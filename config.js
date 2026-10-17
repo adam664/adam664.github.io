@@ -66,7 +66,7 @@ const CONFIG = {
       TYPE: "TEXT",
       CONTENT: "adam664.github.io",
       LOCATION: "BOTTOM_RIGHT",
-      SIZE: "18px",
+      SIZE: "12px",
       FONT_FAMILY: "sans-serif",
       FONT_WEIGHT: "600",
       OPACITY: "0.3",
