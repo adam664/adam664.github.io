@@ -108,5 +108,27 @@
         "description": "Friend's unit, one sample"
       }
     ]
+  },
+  {
+    "name": "Kinera Celest",
+    "phones": [
+      {
+        "name": [
+          "Celest Wyvern"
+        ],
+        "variants": [
+          {
+            "file": "Kinera Celest Wyvern",
+            "samples": {
+              "count": 5,
+              "display": [
+                "avg",
+                "fill"
+              ]
+            }
+          }
+        ]
+      }
+    ]
   }
 ]
