@@ -66,11 +66,11 @@ const CONFIG = {
       TYPE: "TEXT",
       CONTENT: "adam664.github.io",
       LOCATION: "BOTTOM_RIGHT",
-      SIZE: "12px",
+      SIZE: "14px",
       FONT_FAMILY: "sans-serif",
       FONT_WEIGHT: "600",
       OPACITY: "0.3",
-      POSITION: { UP: "0", DOWN: "0", LEFT: "0", RIGHT: "0" },
+      POSITION: { UP: "5", DOWN: "0", LEFT: "5", RIGHT: "0" },
     },
     {
       TYPE: "IMAGE",
