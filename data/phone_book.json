@@ -28,6 +28,28 @@
                 "fill"
               ]
             }
+          },
+          {
+            "suffix": "Spinfit W1",
+            "file": "Nightfall Spinfit W1",
+            "samples": {
+              "count": 5,
+              "display": [
+                "avg",
+                "fill"
+              ]
+            }
+          },
+          {
+            "suffix": "Spinfit Neo",
+            "file": "Nightfall Spinfit Neo",
+            "samples": {
+              "count": 5,
+              "display": [
+                "avg",
+                "fill"
+              ]
+            }
           }
         ]
       }
