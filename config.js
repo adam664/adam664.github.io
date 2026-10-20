@@ -4,7 +4,7 @@
  */
 const CONFIG = {
   // Phone & Targets to display on initial load.
-  INITIAL_PHONES: ["Flo Audio Bluelover"],
+  INITIAL_PHONES: ["Crinear Nightfall"],
   INITIAL_TARGETS: ["∆ Headphones.com IEM DF Target"],
   INITIAL_PANEL: "graph",
   // Default Normalization Type and Value.
