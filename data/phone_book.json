@@ -143,7 +143,35 @@
         "variants": [
           {
             "file": "Blessing2",
-            "samples": 5
+            "samples": {
+              "count": 5,
+              "display": [
+                "avg",
+                "fill"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Softears",
+    "phones": [
+      {
+        "name": [
+          "Studio4"
+        ],
+        "variants": [
+          {
+            "file": "Studio4",
+            "samples": {
+              "count": 5,
+              "display": [
+                "avg",
+                "fill"
+              ]
+            }
           }
         ]
       }
