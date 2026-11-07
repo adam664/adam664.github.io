@@ -4,7 +4,7 @@
  */
 const CONFIG = {
   // Phone & Targets to display on initial load.
-  INITIAL_PHONES: ["Crinear Nightfall"],
+  INITIAL_PHONES: ["Softears Studio4"],
   INITIAL_TARGETS: ["∆ Headphones.com IEM DF Target"],
   INITIAL_PANEL: "graph",
   // Default Normalization Type and Value.
@@ -29,14 +29,14 @@ const CONFIG = {
   },
   // User Interface Settings
   INTERFACE: {
-    PREFERRED_DARK_MODE_THEME: "light",
+    PREFERRED_DARK_MODE_THEME: "system",
     ALLOW_REMOVING_PHONE_FROM_SELECTOR: true,
     SWITCH_PHONE_PANEL_ON_BRAND_CLICK: true,
     SHOW_FREQUENCY_TUTORIAL_ON_INITIAL_LOAD: false,
     TARGET: {
       ALLOW_MULTIPLE_LINE_PER_TYPE: true,
       OMIT_TARGET_SUFFIX: true,
-      COLLAPSE_TARGET_LIST_ON_INITIAL: false,
+      COLLAPSE_TARGET_LIST_ON_INITIAL: { DESKTOP: false, MOBILE: false },
     },
     HIDE_DEV_DONATE_BUTTON: true,
   },
@@ -90,7 +90,7 @@ const CONFIG = {
     },
     {
       type: "DF",
-      files: ["ISO 11904-2 DF Target", "∆ Headphones.com IEM DF Target"],
+      files: ["∆ Headphones.com IEM DF", "∆ JM-1 DF", "∆ 5128 DF", "ISO 11904-2 DF"],
     }
   ],
   // Sample Set Settings
@@ -130,19 +130,17 @@ const CONFIG = {
   PREFERENCE_BOUND: {
     ENABLE_BOUND_ON_INITIAL_LOAD: true,
     BOUND_LIST: [
-      { target: "∆ Headphones.com IEM DF Target" },
-      {
-        target: "ISO 11904-2 DF",
-        upper: "Bounds U.txt",
-        lower: "Bounds D.txt",
-      }
+      { target: "∆ Headphones.com IEM DF" },
+      { target: "∆ JM-1 DF" },
+      { target: "∆ 5128 DF" },
+      { target: "ISO 11904-2 DF" }
     ],
     COLOR_FILL: "rgba(180,180,180,0.1)",
     COLOR_BORDER: "rgba(120,120,120,0.5)",
   },
   // Target Customizer Settings
   TARGET_CUSTOMIZER: {
-    CUSTOMIZABLE_TARGETS: ["∆ Headphones.com IEM DF Target", "ISO 11904-2 DF Target"],
+    CUSTOMIZABLE_TARGETS: ["∆ Headphones.com IEM DF", "∆ JM-1 DF", "∆ 5128 DF", "ISO 11904-2 DF"],
     FILTERS: [
       { id: "tilt", name: "Tilt", type: "TILT", freq: 0, q: 0 },
       {
@@ -159,36 +157,54 @@ const CONFIG = {
         freq: 2500,
         q: 0.42,
       },
-      { id: "ear", name: "Ear", type: "PK", freq: 3000, q: 1 },
       {
         id: "half-tilt",
         name: "Half-Tilt",
-        type: "HSQ",
+        type: "LSQ",
         freq: 630,
         q: 0.4,
-      }
-    ],
-    FILTER_PRESET: [
-      {
-        name: "Harman 2013",
-        filter: { bass: 6.6, treble: -1.4 },
       },
       {
-        name: "Harman 2015",
-        filter: { bass: 6.6, treble: -3, ear: -1.8 },
+        id: "h25bass",
+        name: "Harman MoA 2025 Bass",
+        type: "LSQ",
+        freq: 164,
+        q: 0.4,
+        description: "Based on Harman 2025 MoA Research.",
       },
       {
-        name: "Harman 2018",
-        filter: { bass: 4.8, treble: -4.4 },
+        id: "h25treble",
+        name: "Harman MoA 2025 Treble",
+        type: "HSQ",
+        freq: 4304,
+        q: 0.41,
+        description: "Based on Harman 2025 MoA Research.",
+      },
+      {
+        id: "h25mid",
+        name: "Harman MoA 2025 Mid",
+        type: "PK",
+        freq: 3000,
+        q: 2,
+        description: "Based on Harman 2025 MoA Research.",
       }
     ],
+    FILTER_PRESET: [],
     INITIAL_TARGET_FILTERS: [
       {
-        name: "∆ Headphones.com IEM DF Target",
+        name: "∆ Headphones.com IEM DF",
         filter: { tilt: -1 },
       },
       {
-        name: "ISO 11904-2 DF Target",
+        name: "ISO 11904-2 DF",
+        filter: { tilt: -1 },
+      },
+      {
+        name: "∆ JM-1 DF",
+        filter: { tilt: -1 },
+      },
+      {
+        name: "∆ 5128 DF",
         filter: { tilt: -1 },
       }
     ],
